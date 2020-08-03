@@ -1,0 +1,42 @@
+1、使用的工具
+    git bush(用linux命令操作git控制台)常用
+    git CMD 用win命令来控制git控制台
+    git GUI 可视化工具
+    注册一个github 的账号
+
+2、登录github
+    新建一个文件夹，并cd到这个文件夹下
+    git config --global user.name "Gary-YI"
+    git config --global user.email "y17605179585@163.com"
+
+    git init (在本地进行初始化，运行之后文件夹里会生成一个.git 的文件夹)
+
+3、上传文件
+    提交文件到暂存区
+        git add 文件名
+        git add * 提交所有文件
+        git commit -m "提交文件的描述"：
+
+        git status ： 查看当前工作区的状态
+
+        git checkout 文件名：   从暂存区恢复文件到工作区
+
+        git diff :查看当前修改的文件
+
+        git log :获得历史提交的数据
+
+        git reset --hard +commit 后的数据：恢复文件到指定的版本
+    从暂存区到仓库
+        ssh-keygen -t rsa -C "你的github的邮箱地址" :生成ssh密匙，然后将密匙中的数据复制到GitHub的settings中的ssh_key中
+
+        git remote add origin +github账户中仓库的地址：上传文件到GitHub中
+                                +https://www.github.com/Gary-YI/data_normal.git
+
+        git push -u origin master :这样就提交到仓库中了。如果第一次提交可能会要求输入GitHub用户名和密码
+
+        如果是第二次提交，在git commit -m ""  之后直接输入git push 就直接提交
+
+    如果你有别人的仓库地址就可以直接克隆代码
+        git clone +仓库地址
+
+        git pull 更新代码
